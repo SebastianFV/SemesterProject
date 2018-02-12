@@ -59,8 +59,13 @@ public class Billetautomat {
 	 * Udskriv en billet.
 	 * Opdater total og nedskriv balancen med billetprisen
 	 */
-	public void udskrivBillet() {
-		System.out.println("##########B##T#########");
+	public void udskrivBillet() 
+        {
+                antalBilletterSolgt = antalBilletterSolgt + 1;
+		total = total + balance;    // Usikker på hvad dette er på nuværende tidspunkt:
+                balance = balance - pris;   // Balance er rettet så den ikke altid bliver sat til 0. 
+		
+                System.out.println("##########B##T#########");
 		System.out.println("# BlueJ Trafikselskab #");
 		System.out.println("#                     #");
 		System.out.println("#        Billet       #");
@@ -70,9 +75,5 @@ public class Billetautomat {
 		System.out.println("# Du har " + balance + " kr til gode       #");         // Balancen skal opdateres FØR dette stadie
 		System.out.println("##########B##T#########");
 		System.out.println();
-
-		antalBilletterSolgt = antalBilletterSolgt + 1;
-		total = total + balance; // Opdater total med balance
-		balance = 0;              // Nulstil balance - skal gøres tidligere, og skal være afhængig af prisen.
 	}
 }

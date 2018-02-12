@@ -35,7 +35,8 @@ public class Billetautomat {
 	/**
 	 * Giver prisen for en billet. 
 	 */
-	public int getBilletpris() {
+	public int getBilletpris() 
+        {
 		int resultat = pris;
 		return resultat;
 	}
@@ -43,7 +44,8 @@ public class Billetautomat {
 	/**
 	 * Modtag nogle penge (i kroner) fra en kunde.
 	 */
-	public void indsætPenge(int beløb) {
+	public void indsætPenge(int beløb) 
+        {
 		balance = balance + beløb;
 		total = total + beløb;
 	}
@@ -51,9 +53,16 @@ public class Billetautomat {
 	/**
 	 * Giver balancen (beløbet maskinen har modtaget til den næste billet).
 	 */
-	public int getBalance() {
+	public int getBalance() 
+        {
 		return balance;
 	}
+        
+        // Lavet en setBalance funktion
+        public void setBalance(int balance)
+        {
+            this.balance = balance;     // Sætter balance til at være lig med argumentet i funktionen.
+        }
 
 	/**
 	 * Udskriv en billet.

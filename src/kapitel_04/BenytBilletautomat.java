@@ -13,7 +13,6 @@ public class BenytBilletautomat
             while(true)
             {
                 System.out.println("En kunde vil købe en billet");
-                int pris = automat.getBilletpris();
                 System.out.println("Billetprisen er: " + automat.getBilletpris()+ " kroner");
                 System.out.println("Please put in the required amount");
                 input = tastatur.nextInt();

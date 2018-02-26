@@ -28,6 +28,7 @@ public class BenytBilletautomat
                 }
                 automat.udskrivBillet();    
                 System.out.println("Balancen er nu på " + automat.getBalance() + " kroner");
+                // jeg er en gud! 
             }
 	}
 }
